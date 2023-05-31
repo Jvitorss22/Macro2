@@ -1,0 +1,616 @@
+---
+title: 'Privatização e concessões: Impactos na economia nacional'
+author: "João Vitor"
+date: "2023-05-26"
+output: 
+  html_document: 
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    theme: flatly
+    number_sections: true
+    collapsed: true
+    smooth_scroll: true
+--- 
+
+
+
+
+![](https://yt3.ggpht.com/a/AATXAJy7st4ToALyIZG-VrAIGJH5VFf_ajBho6sQog=s900-c-k-c0xffffffff-no-rj-mo){width=500}
+
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+
+Aluno; João Vitor da Silva Santos
+
+
+Professor; Arthur Guerra Cisneiro
+
+
+Curso; Economia
+
+
+Disciplina; Macroeconomia II
+
+
+Matrícula ;24254
+<br>
+<br>
+<br>
+
+
+
+
+
+``` {r Pacotes, message = FALSE, warning = FALSE, echo= FALSE}
+library(ggplot2)
+library(wooldridge)
+library(dplyr)
+library(rstatix)
+library(htmltools)
+library(kableExtra)
+library(magrittr)
+library(tseries)
+library(knitr)
+
+```
+
+<br>
+<br>
+<br>
+
+#  Privatização e concessões: Impactos na economia nacional
+
+<br>
+<br>
+
+
+## Privatização x Concessão 
+
+* Na privatização, há uma alienação permanente de uma empresa ou serviço público à iniciativa privada. O Estado não exerce mais a gestão daquele bem, que se torna responsabilidade absoluta e definitiva do administrador privado.
+
+<br>
+
+* concessão, ocorre uma transferência temporária da gestão do Estado para o setor privado. A concessionária daquela companhia ou serviço pode explorá-lo, obter lucro e fazer os investimentos que julgar pertinentes. Porém, a empresa voltará ao controle do Estado ao fim do período estipulado em contrato. 
+
+<br>
+<br>
+
+
+## Pontos posítivos da privatização 
+
+1. Enxugamento do aparelho de Estado;
+2. Diminuição da burocracia;
+3. Melhoria da qualidade dos serviços prestados;
+4. Aumento da eficiência; 
+5. Redução da folha salarial e de gastos de forma geral;
+6. Possibilidade de os governos organizarem seus recursos de forma mais racional, investindo em áreas prioritárias; 
+7. Lucros maiores;
+8. Maior geração de riqueza. 
+
+
+<br>
+<br>
+
+
+## Pontos negativos da privatização
+
+1. Desvalorização do patrimônio público;
+2. Perda da soberania do Estado em setores estratégicos; 
+3. Concentração de lucros em empresas do setor privado, com possibilidade de formação de monopólios;
+4. Falta de planejamento de longo prazo;
+5. Perda da capacidade de investimento;
+6. Aumento do número de trabalhadores terceirizados e não formais; 
+7. Maior precarização do trabalho; 
+8. Tendência à diminuição da renda dos trabalhadores.
+
+<br>
+<br>
+
+```{r, echo = FALSE}
+library(kableExtra)
+
+# Dados da tabela
+dados <- data.frame(
+  Governo = c("Governo Collor (1990-1992)", "Governo Itamar (1992-1994)", "Governo FHC (1995-2002)",
+              "Governo Lula (2003-2010)", "Governo Dilma (2011-2016)", "Governo Temer (2016-2018)",
+              "Governo Bolsonaro (2019-2022)"),
+  Privatizacoes = c("Usiminas, Celma, Cosinor", "Embraer, CSN", "Vale, Telebras, Embratel, Banespa, Banco Meridional",
+                    "Rodovias federais, Hidrelétrica Santo Antônio, Hidrelétrica Jirau", "Rodovias, Aeroportos",
+                    "Eletroacre, Ceron", "Eletrobras, Codesa, BR Distribuidora, Liquigás")
+)
+
+# Criação da tabela
+tabela <- dados %>%
+  kable(col.names = c("Governo Federal", "Privatizações")) %>%
+  kable_styling(bootstrap_options = c("striped", "hover"), full_width = FALSE) %>%
+  add_header_above(c("Privatizações Governo Federal" = 2))
+
+# Exibição da tabela
+tabela
+
+```
+
+
+<br>
+<br>
+
+# Governo Collor (1990 - 1992)
+
+ 
+##  Usiminas
+
+* Usiminas ( Usinas Siderurgicas de Minas Gerais S.A) é uma empresa do setor siderúrgico, líder na produção e comercialização de aços planos .
+ 
+ > "Graças à sua situação financeira favorável e à alta qualidade operacional, a Usiminas foi escolhida para ser a primeira empresa a ser privatizada, o que ocorreu em 1991, servindo como símbolo de um novo momento econômico e social brasileiro."
+
+> " Para dar exemplos, a própria Usiminas, alguns poucos anos depois de sua privatização, foi eleita como a Melhor Empresa do Brasil por um ranking confiável, ampliamos nossa atuação com aquisições e entrada em segmentos complementares, como mineração e serviços."
+
+##### SERGIO LEITE - Presidente da Usiminas
+
+
+ 
+
+<br>
+<br>
+
+
+# Governo Itamar (1992-1994)
+
+
+##   Embraer
+
+* A Empresa Brasileira de Aeronáutica (Embraer) foi privatizada por R$ 154,1 milhões, que corrigido pelo IPCA, é equivalente a R$ 1.025.425.349,32 
+
+* Após a privatização, a Embraer expandiu sua linha de produtos, desenvolvendo novos modelos de aeronaves comerciais, executivas e militares. A empresa também se destacou no mercado de jatos regionais, com a família de aeronaves E-Jets, que se tornou um grande sucesso global.
+
+
+
+
+<br>
+<br>
+
+
+# Governo FHC (1995-2002)
+
+
+## Vale
+
+* Companhia Vale do Rio Doce, a Vale, foi privatizada no ano de 1997, pelo valor de  R$ 3,3 bilhões, corrigido pelo IPCA,o valor foi de R$ 155.496.138.600,00. No mesmo ano a empresa se valorizou em 3.500% tendo seu valor de mercado R$ 452 bilhões.
+
+<br>
+<br>
+
+
+![Brumadinho](https://s2-g1.glbimg.com/yjZDBxSpU6MzJa6RyYbI6ABDFoU=/0x0:3174x2116/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/I/w/meXfV8QVCa40GSQazHNA/ap19026698969468.jpg){width=450}
+
+
+<br>
+<br>
+
+## Telebras
+
+* A privatização da Telebras ocorreu em 29 de julho de 1998 em doze leilões consecutivos na Bolsa de Valores do Rio de Janeiro. A época a empresa foi desmembrada em oito operadoras de telefonia móvel, três de telefonia fixa e uma de longa distância, são elas:
+  
+<br>
+<br>
+
+* Telebras o Governo possuía 19% das ações ordinárias, sendo que o restante já estava pulverizado nas mãos de milhões de acionistas privados. Foram esses 19% leiloados e que captaram R$22,05 bilhões.
+
+<br>
+<br>
+
+* A privatização da Telebras foi considerado pela revista Privatization do Reino Unido o maior valor obtido por uma empresa de telecomunicações no anos 90. Naquela época uma linha telefônica custava entre US$1 mil e US$3 mil e demorava de 24 até 60 meses para ser instalada pelo plano de expansão.
+
+
+```{r, echo = FALSE}
+# Dados das concessões
+Telebras <- data.frame(
+  Segmento = c("Telefonia fixa", "Telefonia fixa", "Telefonia fixa", "Telefonia móvel", "Telefonia móvel", 
+               "Telefonia móvel", "Telefonia móvel", "Telefonia móvel", "Telefonia móvel", "Telefonia móvel",
+               "Telefonia móvel", "Longa distância"),
+  Concessao = c("Tele Centro Sul – Brasil Telecom", "Tele Norte Leste – Telemar", "Telesp", "Telesp Celular",
+                "Tele Sudeste Celular", "Telemig Celular", "Tele Celular Sul", "Tele Nordeste Celular",
+                "Tele Centro Oeste Celular", "Tele Leste Celular", "Tele Norte Celular", "Embratel"),
+  Comprador = c("Fundos de pensão, Banco Opportunity e Telecom Itália", "Grupo AG Telecom", "Telefônica",
+                "Portugal Telecom", "Telefônica", "Consórcio Telepart Participações S/A, Telesystem International Wireless, banco Opportunity e fundos de pensão",
+                "UGB Participações e Bitel (Telecom Itália)", "UGB Participações e Bitel (Telecom Itália)",
+                "Splice do Brasil", "Iberdrola e Telefónica de España", "Telepart Participações, Telesystem International Wireless, banco Opportunity e fundos de pensão",
+                "MCI Internacional")
+)
+
+# Formatando a tabela com o pacote kableExtra
+tabela_concessoes_lula <- kable(Telebras, format = "html", escape = FALSE) %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+
+# Exibindo a tabela
+tabela_concessoes_lula
+
+```
+
+
+
+
+
+<br>
+<br>
+
+
+#  Governo Lula (2003-2010)
+
+##  Ferrovia Norte-Sul
+
+> Em outubro de 2007, a operação do trecho da Ferrovia Norte-Sul entre Açailândia (MA) e Porto Nacional (TO) foi concedido pela VALEC à Vale, por um período de 30 anos. A companhia foi a única interessada no leilão, pagando o valor mínimo de R$ 1,478 bilhão de reais, sendo R$ 740 milhões em 21 de dezembro de 2007, quando da assinatura do contrato e os 50% restantes pagos em duas parcelas, corrigidas pelo IGP-DI e acrescidas de juros de 12% ao ano, vencendo em dezembro de 2008 e de 2009. O trecho concedido foi de 722 km, porém somente o trecho entre Açailândia (MA) e Araguaína (TO), com 361 km de extensão, estava concluído em outubro de 2007. Com o dinheiro pago pela concessão, foi realizada a construção do trecho entre Araguaína (TO) e Porto Nacional (TO), com 359 km de extensão.
+
+
+
+<br>
+<br>
+
+
+# Governo Dilma (2011-2016)
+
+
+## Aeroportos (como os de Guarulhos e Brasília)
+
+> Em 7 de janeiro de 2011, a presidente Dilma Rousseff decidiu conceder o aeroporto para a iniciativa privada. Segundo o edital, o consórcio vencedor deveria administrar o aeroporto por um período de 20 anos e fazer as ampliações necessárias. A medida foi adotada para que Cumbica recebesse os investimentos para adequar-se ao aumento da demanda durante a Copa do Mundo FIFA de 2014. Em 21 de julho de 2011, Rousseff assinou decreto incluindo o terminal de Guarulhos no Programa Nacional de Desestatização e delegando à Agência Nacional de Aviação Civil responsabilidade por executar e acompanhar o processo. A assinatura do contrato de concessão ocorreu em 6 de fevereiro de 2012, para o consórcio Invepar/Airports Company South Africa (ACSA) que ficou com 51% da administração do aeroporto e a estatal Infraero com os outros 49%, durante o período de 20 anos, pelo valor 16,2 bilhões de reais.
+
+> O complexo aeroportuário foi concedido à iniciativa privada em 6 de fevereiro de 2012 para o Consórcio Inframérica durante o período de 25 anos, pelo valor de 4,5 bilhões de reais.
+
+<br>
+<br>
+
+
+# Governo Temer (2016-2018)
+
+> O governo federal vai lançar nesta terça-feira o segundo pacote de 54 parcerias público-privadas na área de infraestrutura, com um valor de investimento estimado em 45 bilhões de reais. Desta vez, serão incluídas concessões em linhas de transmissão de energia, portos, ferrovias e uma rodovia. Todos os projetos serão incluídos no Programa de Parceria em Investimentos para terem prioridade na análise em qualquer órgão do governo federal.
+
+
+
+<br>
+<br>
+
+
+#  Governo Bolsonaro (2019-2022)
+
+
+## Eletrobras
+
+<br>
+<br>
+
+
+
+* A privatização movimentou, na estreia, R$ 33,7 bilhões. Ao longo dos próximos anos, serão outros mais de R$ 30 bilhões.
+
+
+<br>
+
+
+
+1. R$ 32 bilhões serão destinados à Conta de Desenvolvimento Energético (CDE) ao longo dos próximos 25 anos, sendo que R$ 5 bilhões serão pagos ainda em 2022. O objetivo é atenuar os reajustes tarifários e subsidiar políticas setoriais;
+<br>
+2.  R$ 25,3 bilhões vão para o caixa do Tesouro e se referem ao chamado bônus de outorga, que será pago pela Eletrobras privatizada à União pela renovação dos contratos das 22 usinas hidrelétricas da empresa; 
+<br>
+3. R$ 9,7 bilhões são compromissos de investimento em bacias hidrográficas, que deverão ser realizados em um período de 10 anos.
+
+
+<br>
+<br>
+<br>
+
+
+```{r, echo= FALSE}
+library(ggplot2)
+
+# Dados de exemplo
+dados <- data.frame(
+  Categoria = c("CDE", "Conta do Tesouro", "Investimentos em Bacias Hidrográficas"),
+  Valor = c(32, 25.3, 9.7)
+)
+
+# Cores personalizadas
+cores <- c("#FF6F61", "#6B5B95", "#88B04B")
+
+# Criação do gráfico de pizza personalizado
+ggplot(dados, aes(x = "", y = Valor, fill = Categoria)) +
+  geom_bar(width = 1, stat = "identity", color = "white") +
+  coord_polar("y", start = 0) +
+  theme_void() +
+  geom_text(aes(label = paste0(Valor, "Bilhões")), position = position_stack(vjust = 0.5), color = "white", size = 4) +
+  scale_fill_manual(values = cores) +
+  labs(title = "Distribuição de Gastos",
+       subtitle = "Valores em bilhões",
+       caption = "Fonte: G1") +
+  theme(plot.title = element_text(face = "bold", size = 16),
+        plot.subtitle = element_text(size = 12),
+        plot.caption = element_text(size = 10),
+        legend.position = "bottom",
+        legend.title = element_blank())
+
+```
+
+
+<br>
+<br>
+
+
+## Companhia Docas do Espírito Santo (Codesa)
+
+<br>
+<br>
+
+* O fundo de investimentos Shelf 119 Multiestratégia, da gestora Quadra Capital, a Companhia Docas do Espírito Santo (Codesa) e será o responsável pela gestão da administradora de portos pelos próximos 35 anos.
+ 
+ 
+<br>
+<br>
+
+
+* O fundo vencedor ofertou uma outorga no valor de R$ 106 milhões pela concessão
+
+<br>
+<br>
+
+
+
+## BR Distribuidora
+
+
+![](https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2021/06/25118_6D0460041006371F-3.jpg?w=876&h=484&crop=1){width=250}
+
+
+* A distribuidora BR, foi privatizada mediante a venda de 30% das ações,  Obtendo um montante de aproximadamente R$ 8,6 bilhões, deixando de ser acionista majoritaria e perdendo o controle da empresa.
+
+<br>
+<br>
+
+* Quando a petrobrás saiu de vez do capital da empresa, o montante levantado foi de aproximadamente R$ 11,6 bilhões. Embora a venda das ações ocorreu no Governo  com 30% vendidos a R$ 5 bilhões. Um total de R$ 24,4 Bilhões.
+
+
+
+<br>
+<br>
+
+
+## Liquigás
+
+* A Petrobras em 2019, vendeu as ações da Liquígas, para a Copagaz e a Nacional Gas Butano, via leilão, recebendo um montante de aproximadamente R$ 4 bilhões na venda.
+
+<br>
+
+
+* Regulamentação: A transação de venda passou pela aprovação do Conselho Administrativo de Defesa Econômica (CADE) e de outros órgãos reguladores competentes para garantir a conformidade com as leis antitruste e proteção ao consumidor.
+
+
+
+```{r, echo= FALSE, message = FALSE, warning = FALSE}
+# Lendo o arquivo CSV
+dados <- read.csv2("liquigas.csv", header = FALSE, sep = ";", dec = ".")
+
+# Definindo nomes das colunas
+colnames(dados) <- dados[1, ]
+dados <- dados[-1, ]
+
+# Removendo espaços extras nos nomes das colunas
+colnames(dados) <- gsub("^\\s+|\\s+$", "", colnames(dados), perl = TRUE)
+
+
+# Criando a tabela formatada com o pacote kableExtra
+tabela_formatada <- kable(dados, align = "c", format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+  
+
+
+# Exibindo a tabela formatada
+tabela_formatada
+
+
+
+
+# Dados de participação
+participacao <- c(21.4, 8.8, 20.1)
+
+# Nomes das empresas
+empresas <- c("Líquigás", "Copagaz", "Nacional Gás Butano")
+
+# Criando o gráfico de barras
+barplot(participacao, names.arg = empresas, xlab = "Empresas", ylab = "Participação (%)",
+        col = c("#FFD700", "#1E90FF", "#008000"), main = "Participação das Empresas no Mercado de Gás",
+        border = "white", ylim = c(0, max(participacao) * 1.2), las = 1)
+
+
+
+# Adicionando legenda
+legend("topright", legend = empresas, fill = c("#FFD700", "#1E90FF", "#008000"))
+
+
+
+
+```
+
+
+
+
+
+<br>
+<br>
+<br>
+
+# Comparação do setor privado e público
+```{r, echo=FALSE}
+dados <- read.csv2("wagemacro.csv", header = TRUE, sep = ";", dec = ".")
+tabela <- data.frame(dados)
+
+# Carregando o pacote kableExtra
+library(kableExtra)
+
+# Lendo o arquivo CSV
+dados <- read.csv2("wagemacro.csv", header = FALSE, sep = ";", dec = ".")
+
+# Definindo nomes das colunas
+colnames(dados) <- dados[1, ]
+dados <- dados[-1, ]
+
+# Removendo espaços extras nos nomes das colunas
+colnames(dados) <- gsub("^\\s+|\\s+$", "", colnames(dados), perl = TRUE)
+
+# Criando a tabela formatada com o pacote kableExtra
+tabela_formatada <- kable(dados, align = "c", format = "html") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+
+# Exibindo a tabela formatada
+tabela_formatada
+
+```
+
+
+```{r, echo=FALSE}
+# Carregando o pacote ggplot2
+library(ggplot2)
+
+# Criando o dataframe com os dados corretos
+dados <- data.frame(
+  Area = c("Assistente administrativo", "Professor de ensino médio do ensino fundamental", "Professor de ensino superior do ensino fundamental", 
+           "Auxiliar de escritório", "Professor de educação de jovens e adultos", "Trabalhador de serviço de limpeza", 
+           "Auxiliar de enfermagem", "Médico clínico", "Motorista", "Em média"),
+  SalarioPublico = c(1680.50, 2331.11, 2516.82, 1640.43, 1947.23, 1282.40, 2132.69, 9664.06, 1918.07, 1948.70),
+  SalarioPrivado = c(3359.90, 3314.16, 3284.88, 3242.54, 5284.18, 1539.67, 4715.83, 9773.21, 2499.46, 4089.04),
+  Diferenca = c(82.50, 42.17, 30.52, 97.66, 171.37, 20.06, 121.12, 1.13, 30.31, 109.83)
+)
+
+# Definindo cores personalizadas
+cor_publico <- "#1f77b4"
+cor_privado <- "#ff7f0e"
+
+# Criando o gráfico de linhas
+grafico <- ggplot(dados, aes(x = Area, y = SalarioPublico, group = 1)) +
+  geom_line(aes(color = "Setor Público"), size = 1.5) +
+  geom_line(aes(y = SalarioPrivado, color = "Setor Privado"), size = 1.5) +
+  labs(x = "Área", y = "Salário", title = "Comparação do Setor Privado e Público") +
+  scale_y_continuous(labels = function(x) paste0("R$", x)) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom") +
+  scale_color_manual(values = c(cor_publico, cor_privado),
+                     labels = c("Setor Público", "Setor Privado"),
+                     guide = guide_legend(override.aes = list(linetype = c(1, 1), size = c(1.5, 1.5))))
+
+# Adicionando rótulos nos pontos de dados
+grafico <- grafico +
+  geom_text(aes(label = paste0(Diferenca, "%")), hjust = -0.2, vjust = 0.5, size = 3, color = "black")
+
+# Exibindo o gráfico
+grafico
+
+
+
+fonte <- "Instituto Millenium"
+
+
+
+
+
+
+
+
+
+
+
+```
+
+## Comparação das rodovias
+![](https://static.poder360.com.br/2018/09/GraficoABCR2-1-1024x585.png)
+
+
+<br>
+<br>
+<br>
+
+## mapa rodoviário 
+![Descrição da Imagem](https://static.poder360.com.br/2018/09/MAPA-ABCR-1024x778.png)
+
+
+# O custo de uma Estatal
+```{r, echo=FALSE}
+# Carregar o pacote ggplot2
+library(ggplot2)
+
+# Criar o dataframe com os valores
+dados <- data.frame(
+  Ano = c(2015, 2016, 2017, 2018, 2019, 2020, 2021),
+  Custo = c(560, 595, 603, 678, 549, 540, 550)
+)
+
+# Criar o gráfico de linha
+grafico <- ggplot(dados, aes(x = Ano, y = Custo)) +
+  geom_line(color = "blue", size = 1.5) +
+  geom_point(color = "blue", size = 3) +
+  labs(x = "Ano", y = "Custo (em milhões de reais)", title = "Custo da EBC por Ano") +
+  scale_y_continuous(labels = function(x) paste0("R$", x, " mi")) +
+  theme_minimal()
+
+# Exibir o gráfico
+print(grafico)
+
+```
+
+> total de R$ 550 milhões orçados para a EBC, quase R$ 400 milhões (exatos R$ 378,4 milhões) são só em salários.
+
+
+![Descrição da Imagem](https://multimidia.gazetadopovo.com.br/media/info/2019/201908/estatais-estaduais_05.png?3)
+
+
+
+
+links: 
+
+https://www1.folha.uol.com.br/mercado/2019/07/privatizada-br-distribuidora-e-80-mais-valiosa.shtml
+
+
+https://www.infomoney.com.br/guias/o-que-e-privatizacao/
+
+https://ineep.org.br/privatizacao-da-liquigas-defesa-da-concorrencia-ou-promocao-do-oligopolio-privado/
+
+https://www.correiobraziliense.com.br/opiniao/2021/11/4961328-30-anos-de-privatizacao-da-usiminas-o-presente-e-o-futuro-da-companhia.html
+
+https://www.poder360.com.br/conteudo-patrocinado/abcr-entrega-documento-a-candidatos-para-aprimorar-concessoes-de-rodovias/
+
+https://www.uol.com.br/splash/noticias/ooops/2021/03/11/dos-r-550-mi-que-a-ebc-custa-r-378-mi-sao-so-em-salarios.htm?cmpid=copiaecola
+
+https://infograficos.gazetadopovo.com.br/politica/financas-das-empresas-estatais-estaduais/
